@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: field-management-app
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:postgresql://localhost:5432/field-management?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    username: postgres
+    password: mechack200
+
+server:
+  port: 8082
