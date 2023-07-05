@@ -29,6 +29,7 @@ public class User {
     @Column(name = "phoneNumber", nullable = false)
     private String phoneNumber;
 
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     @Column(name ="region", nullable = false)
