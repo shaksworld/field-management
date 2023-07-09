@@ -22,6 +22,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.text.ParseException;
 import java.util.HashMap;
 import java.util.List;
@@ -104,6 +105,18 @@ public class AuthController {
         return ResponseEntity.ok().body(tokenDTO);
 
     }
+
+
+    @PostMapping("/addRole")
+    public ResponseEntity<APIResponse<?>> addRole(@RequestParam("role") String role, Principal principal) {
+        String username = principal.getName();
+        UserDTO user = userService.addRoleToUser(username, role);
+        return ResponseEntity.ok(APIResponse.builder()
+                .results(user)
+                .status(SUCCESS)
+                .build());
+    }
+
 
     @PostMapping("/refresh")
     public ResponseEntity refresh(@RequestParam(value = "refreshToken") String refreshToken, HttpServletRequest request) {

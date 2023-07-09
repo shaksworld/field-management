@@ -80,4 +80,9 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public List<UserDTO> findAll() {
         return mapper.map(userRepository.findAll(), List.class);
     }
+
+    @Override
+    public UserDTO updateUser(Long userId, User user) {
+        return null;
+    }
 }

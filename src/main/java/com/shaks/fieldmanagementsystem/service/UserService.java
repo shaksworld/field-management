@@ -2,6 +2,7 @@ package com.shaks.fieldmanagementsystem.service;
 
 import com.shaks.fieldmanagementsystem.dto.SignupDTO;
 import com.shaks.fieldmanagementsystem.dto.UserDTO;
+import com.shaks.fieldmanagementsystem.entity.User;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +21,8 @@ public interface UserService {
     UserDTO findByUsername(String username);
 
     List<UserDTO> findAll();
+
+    UserDTO updateUser(Long userId, User user);
 
 //    void saveVerificationTokenForUser(String token, User user);
 
