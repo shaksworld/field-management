@@ -53,5 +53,8 @@ public class User {
     private String country;
 
 
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private Team team;
 
 }

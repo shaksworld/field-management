@@ -4,11 +4,7 @@ import com.shaks.fieldmanagementsystem.dto.SignupDTO;
 import com.shaks.fieldmanagementsystem.dto.UserDTO;
 
 import java.util.List;
-import java.util.Optional;
 
-/**
- * @author Sandaru Anjana <sandaruanjana@outlook.com>
- */
 public interface UserService {
 
 
