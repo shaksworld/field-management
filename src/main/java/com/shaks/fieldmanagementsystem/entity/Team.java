@@ -3,6 +3,7 @@ package com.shaks.fieldmanagementsystem.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -25,7 +26,7 @@ public class Team {
     private String teamDescription;
 
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL)
-    private List<User> users;
+    private List<User> users = new ArrayList<>();
 
 //    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
 //    private User teamLeader;

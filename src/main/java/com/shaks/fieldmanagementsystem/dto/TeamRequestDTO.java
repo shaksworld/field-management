@@ -1,13 +1,14 @@
 package com.shaks.fieldmanagementsystem.dto;
 
 import com.shaks.fieldmanagementsystem.entity.User;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
+@Setter
+@Getter
 public class TeamRequestDTO {
 
     private String name;
