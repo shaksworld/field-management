@@ -5,11 +5,7 @@ import com.shaks.fieldmanagementsystem.dto.UserDTO;
 import com.shaks.fieldmanagementsystem.entity.User;
 
 import java.util.List;
-import java.util.Optional;
 
-/**
- * @author Sandaru Anjana <sandaruanjana@outlook.com>
- */
 public interface UserService {
 
 
