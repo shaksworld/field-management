@@ -21,12 +21,15 @@ public class Team {
     private Long id;
 
     @Column(unique = true, nullable = false)
-    private String teamName;
+    private String name;
 
     @Column(nullable = false)
     private String teamDescription;
 
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL)
     private List<User> users;
+
+//    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+//    private User teamLeader;
 
 }
